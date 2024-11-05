@@ -1,0 +1,25 @@
+{
+  "name": "auratoken",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "start": "npx hardhat node",
+    "compile": "npx hardhat compile",
+    "deploy:local": "npx hardhat ignition deploy ignition/modules/Lumen.ts --network localhost",
+    "deploy:testnet": "npx hardhat ignition deploy ignition/modules/Lumen.ts --network sepolia",
+    "deploy:bsc": "npx hardhat run scripts/deploy.ts --network bsctestnet"
+  },
+  "keywords": [],
+  "author": "Luciano Zanin Gabriel",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.15"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.1.0",
+    "dotenv": "^16.4.5"
+  }
+}
