@@ -6,8 +6,8 @@
     "test": "npx hardhat test",
     "start": "npx hardhat node",
     "compile": "npx hardhat compile",
-    "deploy:local": "npx hardhat ignition deploy ignition/modules/Lumen.ts --network localhost",
-    "deploy:testnet": "npx hardhat ignition deploy ignition/modules/Lumen.ts --network sepolia",
+    "deploy:local": "npx hardhat ignition deploy ignition/modules/AuraToken.ts --network localhost",
+    "deploy:testnet": "npx hardhat ignition deploy ignition/modules/AuraToken.ts --network sepolia",
     "deploy:bsc": "npx hardhat run scripts/deploy.ts --network bsctestnet"
   },
   "keywords": [],
