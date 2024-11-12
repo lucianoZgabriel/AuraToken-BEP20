@@ -15,14 +15,14 @@ contract AuraToken is ERC20 {
         _mint(msg.sender, 1000 * 10 ** decimals());
     }
 
-    function mint() public {
+    function mint(address to) public onlyOwner {
         require(_mintAmount > 0, "AuraToken: mint amount is 0");
         require(
-            _netxMintTime[msg.sender] < block.timestamp,
+            _netxMintTime[to] < block.timestamp,
             "AuraToken: mint is not allowed yet"
         );
-        _mint(msg.sender, _mintAmount);
-        _netxMintTime[msg.sender] = block.timestamp + _mintDelay;
+        _mint(to, _mintAmount);
+        _netxMintTime[to] = block.timestamp + _mintDelay;
     }
 
     function setMintAmount(uint amount) public onlyOwner {

@@ -31,7 +31,7 @@ const config: HardhatUserConfig = {
     },
   },
   etherscan: {
-    apiKey: process.env.API_KEY,
+    apiKey: process.env.BNB_API_KEY,
   },
 };
 
